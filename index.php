@@ -37,7 +37,7 @@
     </div>
     <div class="col-sm-4">
       <h3>ADD PAYMENT</h3>        
-      <a href="#" class="btn btn-info btn-lg" role="button">ADD PAYMENT</a>
+      <a href="add_payment.php" class="btn btn-info btn-lg" role="button">ADD PAYMENT</a>
       <br><br>
     </div>
   </div>

@@ -25,14 +25,10 @@
 
 
 <?php
-$afid = $_POST["fid"];
-$afnama = $_POST["fnama"];
-$aftahun_lahir = $_POST["ftahun_lahir"];
-$afsubjek = $_POST["fsubjek"];
-$afhari = $_POST["fhari"];
-$afbayaranHour = $_POST["fbayaranHour"];
-$afalamat = $_POST["falamat"];
-$afnota = $_POST["fnota"];
+$affPnama = $_POST["ffPnama"];
+$affPdatepay = $_POST["ffPdatepay"];
+$affPnota = $_POST["ffPnota"];
+$affPamount = $_POST["ffPamount"];
 
 
 
@@ -51,8 +47,8 @@ if ($conn->connect_error) {
 }
 //echo "Connected successfully<br>";
 
-$sql = "INSERT INTO pelajar (id,nama,tahun_lahir,subjek,hari,bayaranHour,alamat,nota) 
-VALUES ('$afid','$afnama','$aftahun_lahir','$afsubjek','$afhari','$afbayaranHour','$afalamat','$afnota')";
+$sql = "INSERT INTO payment (Pnama,Pdatepay,Pnota,Pamount) 
+VALUES ('$affPnama','$affPdatepay','$affPnota','$affPamount')";
 
 if ($conn->query($sql) === TRUE) {
     //echo "New record created successfully";
