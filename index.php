@@ -32,7 +32,7 @@
     </div>
     <div class="col-sm-4">
       <h3>ADD STUDENT</h3>        
-      <a href="#" class="btn btn-info btn-lg" role="button">ADD STUDENT</a>
+      <a href="add_student.php" class="btn btn-info btn-lg" role="button">ADD STUDENT</a>
       <br><br>
     </div>
     <div class="col-sm-4">
