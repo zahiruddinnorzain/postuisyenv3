@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <title>Receipt_Tuition
+  </title>
+</head>
 <style>
 
 body {
