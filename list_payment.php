@@ -25,7 +25,7 @@
 
 
 <table class="table">
-    <tr><th>ID</th><th>nama</th><th>Date Pay</th><th>Nota</th><th>amount RM</th></tr>
+    <tr><th>ID</th><th>nama</th><th>Date Pay</th><th>Subject</th><th>Hours</th><th>amount RM</th></tr>
 
       <?php
 $servername = "localhost";
@@ -48,7 +48,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "</td><td>".$row["ID"]."</td><td>".$row["Pnama"]."</td><td>".$row["Pdatepay"]."</td><td>".$row["Pnota"]."</td><td>".$row["Pamount"]."</td></tr>";
+        echo "</td><td>".$row["ID"]."</td><td>".$row["Pnama"]."</td><td>".$row["Pdatepay"]."</td><td>".$row["Psubjek"]."</td><td>".$row["Pjam"]."</td><td>".$row["Pamount"]."</td></tr>";
     }
 } else {
     echo "0 results";
@@ -58,6 +58,18 @@ $conn->close();
 
 </table>
 
+<!-- print -->
+<h3>Print Your Payment</h3>
+<form action="print.php" method="post">
+
+    <div class="form-group">
+      <label for="usr">Insert ID to print :</label>
+      <input type="text" class="form-control" id="usr" name="idprint" required="true">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Print</button>
+
+</form>
 
 
       <br>

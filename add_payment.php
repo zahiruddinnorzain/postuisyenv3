@@ -37,8 +37,13 @@
     </div>
 
     <div class="form-group">
-      <label for="usr">Notes:</label>
-      <input type="text" class="form-control" id="pwd" name="ffPnota">
+      <label for="usr">Subject:</label>
+      <input type="text" class="form-control" id="pwd" name="ffPsubjek">
+    </div>
+
+    <div class="form-group">
+      <label for="usr">Hours:</label>
+      <input type="text" class="form-control" id="pwd" name="ffPjam">
     </div>
 
     <div class="form-group">
