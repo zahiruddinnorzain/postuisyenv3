@@ -1,8 +1,8 @@
-Install php 7
-xampp
-mysql
+Install php 7  
+xampp  
+mysql    
 
-powered by:
-bootstrap 4
-PHP 7
-mysql
+powered by:  
+bootstrap 4  
+PHP 7  
+mysql  
