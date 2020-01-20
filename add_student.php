@@ -28,32 +28,27 @@
 
     <div class="form-group">
       <label for="usr">Name:</label>
-      <input type="text" class="form-control" id="usr" name="fnama">
-    </div>
-
-    <div class="form-group">
-      <label for="usr">id:</label>
-      <input type="text" class="form-control" id="pwd" name="fid">
+      <input type="text" class="form-control" id="usr" name="fnama" required="true">
     </div>
 
     <div class="form-group">
       <label for="usr">Year of Birth:</label>
-      <input type="text" class="form-control" id="pwd" name="ftahun_lahir">
+      <input type="text" class="form-control" id="pwd" name="ftahun_lahir" required="true">
     </div>
 
     <div class="form-group">
       <label for="usr">Subject:</label>
-      <input type="text" class="form-control" id="pwd" name="fsubjek">
+      <input type="text" class="form-control" id="pwd" name="fsubjek" required="true">
     </div>
 
     <div class="form-group">
       <label for="usr">Day:</label>
-      <input type="text" class="form-control" id="pwd" name="fhari">
+      <input type="text" class="form-control" id="pwd" name="fhari" required="true">
     </div>
 
     <div class="form-group">
       <label for="usr">Payment/Hour:</label>
-      <input type="number" class="form-control" id="pwd" name="fbayaranHour">
+      <input type="number" class="form-control" id="pwd" name="fbayaranHour" required="true">
     </div>
 
     <div class="form-group">

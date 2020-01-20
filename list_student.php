@@ -25,7 +25,7 @@
 
 
 <table class="table">
-    <tr><th>nama</th><th>id</th><th>tahun lahir</th><th>subjek</th><th>hari</th><th>bayaran/Hour</th><th>alamat</th><th>nota</th></tr>
+    <tr><th>ID</th><th>Name</th><th>tahun lahir</th><th>subjek</th><th>hari</th><th>bayaran/Hour</th><th>alamat</th><th>nota</th></tr>
 
       <?php
 $servername = "localhost";
@@ -48,7 +48,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "</td><td>".$row["nama"]."</td><td>".$row["id"]."</td><td>".$row["tahun_lahir"]."</td><td>".$row["subjek"]."</td><td>".$row["hari"]."</td><td>".$row["bayaranHour"]."</td><td>".$row["alamat"]."</td><td>".$row["nota"]."</td></tr>";
+        echo "</td><td>".$row["id"]."</td><td>".$row["nama"]."</td><td>".$row["tahun_lahir"]."</td><td>".$row["subjek"]."</td><td>".$row["hari"]."</td><td>".$row["bayaranHour"]."</td><td>".$row["alamat"]."</td><td>".$row["nota"]."</td></tr>";
     }
 } else {
     echo "0 results";

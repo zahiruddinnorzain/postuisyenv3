@@ -28,12 +28,12 @@
 
     <div class="form-group">
       <label for="usr">Name:</label>
-      <input type="text" class="form-control" id="usr" name="ffPnama">
+      <input type="text" class="form-control" id="usr" name="ffPnama" required="true">
     </div>
 
     <div class="form-group">
       <label for="usr">Date to pay:</label>
-      <input type="text" class="form-control" id="pwd" name="ffPdatepay">
+      <input type="text" class="form-control" id="pwd" name="ffPdatepay" required="true">
     </div>
 
     <div class="form-group">
@@ -43,7 +43,7 @@
 
     <div class="form-group">
       <label for="usr">Total Amount (RM):</label>
-      <input type="text" class="form-control" id="pwd" name="ffPamount">
+      <input type="text" class="form-control" id="pwd" name="ffPamount" required="true">
     </div>
 
     <button type="submit" class="btn btn-primary">Submit</button>

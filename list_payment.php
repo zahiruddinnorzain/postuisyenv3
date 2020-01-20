@@ -25,7 +25,7 @@
 
 
 <table class="table">
-    <tr><th>nama</th><th>Date Pay</th><th>Nota</th><th>amount RM</th></tr>
+    <tr><th>ID</th><th>nama</th><th>Date Pay</th><th>Nota</th><th>amount RM</th></tr>
 
       <?php
 $servername = "localhost";
@@ -48,7 +48,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo "</td><td>".$row["Pnama"]."</td><td>".$row["Pdatepay"]."</td><td>".$row["Pnota"]."</td><td>".$row["Pamount"]."</td></tr>";
+        echo "</td><td>".$row["ID"]."</td><td>".$row["Pnama"]."</td><td>".$row["Pdatepay"]."</td><td>".$row["Pnota"]."</td><td>".$row["Pamount"]."</td></tr>";
     }
 } else {
     echo "0 results";

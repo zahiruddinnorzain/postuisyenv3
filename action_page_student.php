@@ -25,7 +25,7 @@
 
 
 <?php
-$afid = $_POST["fid"];
+//$afid = $_POST["fid"];
 $afnama = $_POST["fnama"];
 $aftahun_lahir = $_POST["ftahun_lahir"];
 $afsubjek = $_POST["fsubjek"];
@@ -51,8 +51,8 @@ if ($conn->connect_error) {
 }
 //echo "Connected successfully<br>";
 
-$sql = "INSERT INTO pelajar (id,nama,tahun_lahir,subjek,hari,bayaranHour,alamat,nota) 
-VALUES ('$afid','$afnama','$aftahun_lahir','$afsubjek','$afhari','$afbayaranHour','$afalamat','$afnota')";
+$sql = "INSERT INTO pelajar (nama,tahun_lahir,subjek,hari,bayaranHour,alamat,nota) 
+VALUES ('$afnama','$aftahun_lahir','$afsubjek','$afhari','$afbayaranHour','$afalamat','$afnota')";
 
 if ($conn->query($sql) === TRUE) {
     //echo "New record created successfully";
