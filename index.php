@@ -1,47 +1,128 @@
+<?php
+include "data/config.php";
+
+
+if(isset($_POST['but_submit'])){
+
+    $uname = mysqli_real_escape_string($con,$_POST['txt_uname']);
+    $password = mysqli_real_escape_string($con,$_POST['txt_pwd']);
+
+
+    if ($uname != "" && $password != ""){
+
+        $sql_query = "select count(*) as cntUser from users where username='".$uname."' and password='".$password."'";
+        $result = mysqli_query($con,$sql_query);
+        $row = mysqli_fetch_array($result);
+
+        $count = $row['cntUser'];
+
+        if($count > 0){
+            $_SESSION['uname'] = $uname;
+            header('Location: index2.php');
+        }else{
+            echo "<script>alert('Invalid username and password');</script>";
+        }
+
+    }
+
+}
+?>
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <title>POS TUISYEN V3</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<title>POSTUISYEN V3</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.avatar {
+  width: 20%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>
 </head>
 <body>
 
-<div class="jumbotron text-center">
-  <h1>POS TUISYEN V3</h1>
-  <p>Your student management system v3.0<br>
-  by Bairoha Enterprise (2020)<br>
-  kepaknaga@gmail.com</p> 
-</div>
-  
-<div class="container">
-  <div class="row">
-    <div class="col-sm-4">
-      <h3>LIST STUDENT</h3>
-      <a href="list_student.php" class="btn btn-info btn-lg" role="button">LIST STUDENT</a>
-      <br><br>
-    </div>
-    <div class="col-sm-4">
-      <h3>LIST PAYMENT</h3>
-      <a href="list_payment.php" class="btn btn-info btn-lg" role="button">LIST PAYMENT</a>
-      <br><br>
-    </div>
-    <div class="col-sm-4">
-      <h3>ADD STUDENT</h3>        
-      <a href="add_student.php" class="btn btn-info btn-lg" role="button">ADD STUDENT</a>
-      <br><br>
-    </div>
-    <div class="col-sm-4">
-      <h3>ADD PAYMENT</h3>        
-      <a href="add_payment.php" class="btn btn-info btn-lg" role="button">ADD PAYMENT</a>
-      <br><br>
-    </div>
+<h2>POSTUISYEN V3</h2>
+
+<form action="" method="post">
+  <div class="imgcontainer">
+    <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="Avatar" class="avatar" alt="User">
   </div>
-</div>
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="txt_uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="txt_pwd" required>
+        
+    <button type="submit" name="but_submit">Login</button>
+    
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    </label>Created by Bairoha Enterprise 2020</label>
+    
+  </div>
+</form>
 
 </body>
 </html>

@@ -73,7 +73,7 @@ $conn->close();
 
 
       <br>
-      <a href="../postuisyenv3" class="btn btn-info btn-lg" role="button">Back</a>
+      <a href="../postuisyenv3/index2.php" class="btn btn-info btn-lg" role="button">Back</a>
       <br><br>
 
 
