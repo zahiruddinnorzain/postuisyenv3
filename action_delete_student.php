@@ -21,13 +21,13 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-4">
-      <h3>LIST STUDENT</h3>
+      
 
 
-<table class="table">
-    <tr><th>ID</th><th>Name</th><th>tahun lahir</th><th>subjek</th><th>hari</th><th>bayaran/Hour</th><th>alamat</th><th>nota</th></tr>
+<?php
 
-      <?php
+$AdeleteStudent = $_POST["deleteStudent"];
+
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -42,44 +42,28 @@ if ($conn->connect_error) {
 }
 //echo "Connected successfully<br>";
 
-$sql = "SELECT * FROM pelajar";
-$result = $conn->query($sql);
+$sql = "DELETE FROM pelajar WHERE id='$AdeleteStudent'";
 
-if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-        echo "</td><td>".$row["id"]."</td><td>".$row["nama"]."</td><td>".$row["tahun_lahir"]."</td><td>".$row["subjek"]."</td><td>".$row["hari"]."</td><td>".$row["bayaranHour"]."</td><td>".$row["alamat"]."</td><td>".$row["nota"]."</td></tr>";
-    }
+if ($conn->query($sql) === TRUE) {
+    //echo "New record created successfully";
+    echo "<div class='alert alert-success'><strong>Success!</strong> ID " . $AdeleteStudent . " deleted successfully.</div>";
 } else {
-    echo "0 results";
+    echo "Error: " . $sql . "<br>" . $conn->error;
 }
+
 $conn->close();
 ?>
 
-</table>
 
-<!-- delete -->
-<h3>Delete data</h3>
-<form action="action_delete_student.php" method="post">
-
-    <div class="form-group">
-      <label for="usr">Insert ID to delete :</label>
-      <input type="text" class="form-control" id="usr" name="deleteStudent" required="true">
-    </div>
-
-    <button type="submit" class="btn btn-primary">Delete</button>
-
-</form>
 
 
       <br>
       <a href="index2.php" class="btn btn-info btn-lg" role="button">Back</a>
       <br><br>
 
-
     </div>
-    
   </div>
 </div>
+
 </body>
 </html>

@@ -71,6 +71,19 @@ $conn->close();
 
 </form>
 
+<!-- delete --><br>
+<h3>Delete data</h3>
+<form action="action_delete_payment.php" method="post">
+
+    <div class="form-group">
+      <label for="usr">Insert ID to delete :</label>
+      <input type="text" class="form-control" id="usr" name="deletePayment" required="true">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Delete</button>
+
+</form>
+
 
       <br>
       <a href="index2.php" class="btn btn-info btn-lg" role="button">Back</a>
