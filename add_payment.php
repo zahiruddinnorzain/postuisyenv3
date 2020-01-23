@@ -42,9 +42,9 @@
       <label for="usr">Date to pay:</label>
       <!--<input type="text" class="form-control" id="pwd" name="ffPdatepay" required="true">-->
 
-      <input id="Pdatepay" name="ffPdatepay" width="276"  required="true" />
+      <input id="datepicker" name="ffPdatepay" width="276"  required="true" />
         <script>
-          $('#Pdatepay').datepicker({
+          $('#datepicker').datepicker({
               uiLibrary: 'bootstrap4',
               format: 'dd/mm/yyyy',
           });
@@ -59,12 +59,12 @@
 
     <div class="form-group">
       <label for="usr">Hours:</label>
-      <input type="text" class="form-control" id="pwd" name="ffPjam">
+      <input type="number" class="form-control" id="pwd" name="ffPjam">
     </div>
 
     <div class="form-group">
       <label for="usr">Total Amount (RM):</label>
-      <input type="text" class="form-control" id="pwd" name="ffPamount" required="true">
+      <input type="number" class="form-control" id="pwd" name="ffPamount" required="true">
     </div>
 
     <button type="submit" class="btn btn-primary">Submit</button>

@@ -33,7 +33,7 @@
 
     <div class="form-group">
       <label for="usr">Year of Birth:</label>
-      <input type="text" class="form-control" id="pwd" name="ftahun_lahir" required="true">
+      <input type="number" class="form-control" id="pwd" name="ftahun_lahir" required="true">
     </div>
 
     <div class="form-group">
