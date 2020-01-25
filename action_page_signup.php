@@ -55,8 +55,8 @@ VALUES ('$ssusername','$ssname','$sspassword','$ssalamat','$ssphone')";
 if ($conn->query($sql) === TRUE) {
     //echo "New record created successfully";
     echo "<div class='alert alert-success'><strong>Success!</strong> New user created successfully.</div>";
-    session_start();
-    $_SESSION['userID'] = $ssname;
+    //session_start();
+    //$_SESSION['userID'] = $ssname;
 
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;

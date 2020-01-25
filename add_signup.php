@@ -18,20 +18,11 @@
 </head>
 <body>
 
-  <?php
-  //session username
-  session_start();
-  $username = $_SESSION['userID'];
-  //echo $username;
-  ?>
-
 <div class="jumbotron text-center">
   <h1>POS TUISYEN V3</h1>
   <p>Your student management system<br>
   by Bairoha Enterprise (2020)<br>
-  kepaknaga@gmail.com<br>
-  <b>Welcome <?php echo $username; ?></b>
-  <a class="nav-link" href="logout.php">Logout</a></p> 
+  kepaknaga@gmail.com</p> 
 </div>
   
 

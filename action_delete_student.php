@@ -1,3 +1,9 @@
+<?php
+  //session username
+  session_start();
+  $username = $_SESSION['userID'];
+  //echo $username;
+  ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,12 +16,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-  <?php
-  //session username
-  session_start();
-  $username = $_SESSION['userID'];
-  //echo $username;
-  ?>
+
 
 <div class="jumbotron text-center">
   <h1>POS TUISYEN V3</h1>

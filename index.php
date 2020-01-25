@@ -17,7 +17,7 @@ if(isset($_POST['but_submit'])){
         $count = $row['cntUser'];
 
         if($count > 0){
-            session_start();
+            //session_start();
             $_SESSION['userID'] = $uname;
             header('Location: index2.php');
         }else{

@@ -1,3 +1,9 @@
+<?php
+  //session username
+  session_start();
+  $username = $_SESSION['userID'];
+  //echo $username;
+  ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,12 +17,7 @@
 </head>
 <body>
 
-<?php
-  //session username
-  session_start();
-  $username = $_SESSION['userID'];
-  //echo $username;
-  ?>
+
 
 <div class="jumbotron text-center">
   <h1>POS TUISYEN V3</h1>
