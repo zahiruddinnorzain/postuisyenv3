@@ -51,7 +51,10 @@ if ($conn->connect_error) {
 }
 //echo "Connected successfully<br>";
 
-$sql = "SELECT * FROM payment";
+//declare username to use in sql
+$username = $_SESSION['userID'];
+
+$sql = "SELECT * FROM payment WHERE username='$username' ";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {

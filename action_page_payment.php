@@ -38,6 +38,7 @@ $affPdatepay = $_POST["ffPdatepay"];
 $affPsubjek = $_POST["ffPsubjek"];
 $affPjam = $_POST["ffPjam"];
 $affPamount = $_POST["ffPamount"];
+$affusername = $username;
 
 
 
@@ -56,8 +57,8 @@ if ($conn->connect_error) {
 }
 //echo "Connected successfully<br>";
 
-$sql = "INSERT INTO payment (Pnama,Pdatepay,Psubjek,Pjam,Pamount) 
-VALUES ('$affPnama','$affPdatepay','$affPsubjek','$affPjam','$affPamount')";
+$sql = "INSERT INTO payment (username,Pnama,Pdatepay,Psubjek,Pjam,Pamount) 
+VALUES ('$affusername','$affPnama','$affPdatepay','$affPsubjek','$affPjam','$affPamount')";
 
 if ($conn->query($sql) === TRUE) {
     //echo "New record created successfully";

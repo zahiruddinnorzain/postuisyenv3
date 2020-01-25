@@ -41,6 +41,7 @@ $afhari = $_POST["fhari"];
 $afbayaranHour = $_POST["fbayaranHour"];
 $afalamat = $_POST["falamat"];
 $afnota = $_POST["fnota"];
+$afusername = $username;
 
 
 
@@ -59,8 +60,8 @@ if ($conn->connect_error) {
 }
 //echo "Connected successfully<br>";
 
-$sql = "INSERT INTO pelajar (nama,tahun_lahir,subjek,hari,bayaranHour,alamat,nota) 
-VALUES ('$afnama','$aftahun_lahir','$afsubjek','$afhari','$afbayaranHour','$afalamat','$afnota')";
+$sql = "INSERT INTO pelajar (username,nama,tahun_lahir,subjek,hari,bayaranHour,alamat,nota) 
+VALUES ('$afusername','$afnama','$aftahun_lahir','$afsubjek','$afhari','$afbayaranHour','$afalamat','$afnota')";
 
 if ($conn->query($sql) === TRUE) {
     //echo "New record created successfully";

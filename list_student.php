@@ -49,10 +49,14 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-//echo "Connected successfully<br>";
 
-$sql = "SELECT * FROM pelajar";
+//declare username to use in sql
+$username = $_SESSION['userID'];
+
+//echo "Connected successfully<br>";
+$sql = "SELECT * FROM pelajar WHERE username='$username' ";
 $result = $conn->query($sql);
+
 
 if ($result->num_rows > 0) {
     // output data of each row
