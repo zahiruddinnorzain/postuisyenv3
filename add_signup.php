@@ -38,42 +38,33 @@
 
 
 <div class="container">
-  <h2>Add Payment</h2>
-  <p>Add your student payment</p>
-  <form action="action_page_payment.php" method="post">
+  <h2>Sign up</h2>
+  <p>Fill this form to sign up</p>
+  <form action="action_page_signup.php" method="post">
 
     <div class="form-group">
       <label for="usr">Name:</label>
-      <input type="text" class="form-control" id="usr" name="ffPnama" required="true">
+      <input type="text" class="form-control" id="usr" name="Sname" required="true">
     </div>
 
     <div class="form-group">
-      <label for="usr">Date to pay:</label>
-      <!--<input type="text" class="form-control" id="pwd" name="ffPdatepay" required="true">-->
-
-      <input id="datepicker" name="ffPdatepay" width="276"  required="true" />
-        <script>
-          $('#datepicker').datepicker({
-              uiLibrary: 'bootstrap4',
-              format: 'dd/mm/yyyy',
-          });
-        </script>
-
+      <label for="usr">Username:</label>
+      <input type="text" class="form-control" id="pwd" name="Susername" required="true">
     </div>
 
     <div class="form-group">
-      <label for="usr">Subject:</label>
-      <input type="text" class="form-control" id="pwd" name="ffPsubjek">
+      <label for="usr">Password:</label>
+      <input type="password" class="form-control" id="pwd" name="Spassword">
     </div>
 
     <div class="form-group">
-      <label for="usr">Hours:</label>
-      <input type="number" class="form-control" id="pwd" name="ffPjam">
+      <label for="usr">Address:</label>
+      <input type="text" class="form-control" id="pwd" name="Saddress">
     </div>
 
     <div class="form-group">
-      <label for="usr">Total Amount (RM):</label>
-      <input type="number" class="form-control" id="pwd" name="ffPamount" required="true">
+      <label for="usr">Phone Number:</label>
+      <input type="number" class="form-control" id="pwd" name="Sphone" required="true">
     </div>
 
     <button type="submit" class="btn btn-primary">Submit</button>

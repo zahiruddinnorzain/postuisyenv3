@@ -17,7 +17,8 @@ if(isset($_POST['but_submit'])){
         $count = $row['cntUser'];
 
         if($count > 0){
-            $_SESSION['uname'] = $uname;
+            session_start();
+            $_SESSION['userID'] = $uname;
             header('Location: index2.php');
         }else{
             echo "<script>alert('Invalid username and password');</script>";
@@ -61,7 +62,7 @@ button:hover {
   opacity: 0.8;
 }
 
-.cancelbtn {
+.signupbtn {
   width: auto;
   padding: 10px 18px;
   background-color: #f44336;
@@ -119,6 +120,7 @@ span.psw {
   </div>
 
   <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="signupbtn" onclick="window.location.href = 'add_signup.php';">Sign up</button>
     </label><h5>Created by Bairoha Enterprise 2020</h5></label>
     
   </div>

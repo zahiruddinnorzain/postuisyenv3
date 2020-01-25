@@ -11,20 +11,11 @@
 </head>
 <body>
 
-<?php
-  //session username
-  session_start();
-  $username = $_SESSION['userID'];
-  //echo $username;
-  ?>
-
 <div class="jumbotron text-center">
   <h1>POS TUISYEN V3</h1>
   <p>Your student management system<br>
   by Bairoha Enterprise (2020)<br>
-  kepaknaga@gmail.com<br>
-  <b>Welcome <?php echo $username; ?></b>
-  <a class="nav-link" href="logout.php">Logout</a></p> 
+  kepaknaga@gmail.com</p> 
 </div>
   
 <div class="container">
@@ -34,8 +25,15 @@
 
 
 <?php
+//$afid = $_POST["fid"];
+$ssusername = $_POST["Susername"];
+$ssname = $_POST["Sname"];
+$sspassword = $_POST["Spassword"];
+$ssalamat = $_POST["Saddress"];
+$ssphone = $_POST["Sphone"];
 
-$AdeletePayment = $_POST["deletePayment"];
+
+
 
 $servername = "localhost";
 $username = "root";
@@ -51,11 +49,15 @@ if ($conn->connect_error) {
 }
 //echo "Connected successfully<br>";
 
-$sql = "DELETE FROM payment WHERE id='$AdeletePayment'";
+$sql = "INSERT INTO users (username,name,password,alamat,phone) 
+VALUES ('$ssusername','$ssname','$sspassword','$ssalamat','$ssphone')";
 
 if ($conn->query($sql) === TRUE) {
     //echo "New record created successfully";
-    echo "<div class='alert alert-success'><strong>Success!</strong> ID " . $AdeletePayment . " deleted successfully.</div>";
+    echo "<div class='alert alert-success'><strong>Success!</strong> New user created successfully.</div>";
+    session_start();
+    $_SESSION['userID'] = $ssname;
+
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
@@ -67,7 +69,7 @@ $conn->close();
 
 
       <br>
-      <a href="list_payment.php" class="btn btn-info btn-lg" role="button">Back</a>
+      <a href="index.php" class="btn btn-info btn-lg" role="button">Back</a>
       <br><br>
 
     </div>
