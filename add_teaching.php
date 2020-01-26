@@ -53,7 +53,7 @@
     </div>
 
     <div class="form-group">
-      <label for="usr">Date to pay:</label>
+      <label for="usr">Date to teach:</label>
       <!--<input type="text" class="form-control" id="pwd" name="ffPdatepay" required="true">-->
 
       <input id="datepicker" name="ttdate" width="276"  required="true" />
@@ -65,6 +65,8 @@
         </script>
     </div>
 
+    <div class="form-group">
+    <label for="usr">Time to teach:</label>
     <input id="timepicker" name="tttime" width="276" />
     <script>
         $('#timepicker').timepicker({
@@ -72,6 +74,7 @@
             format: 'hh:mm tt',
         });
     </script>
+    </div>
 
     <div class="form-group">
       <label for="usr">Hours:</label>
