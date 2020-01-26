@@ -32,10 +32,7 @@ th, td {
 
 
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "postuisyenv3";
+include "connectdb.php";
 
 $idnumber = $_POST['idprint'];
 

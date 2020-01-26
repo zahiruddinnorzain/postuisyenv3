@@ -36,11 +36,9 @@
 <table class="table">
     <tr><th>ID</th><th>nama</th><th>Date Pay</th><th>Subject</th><th>Hours</th><th>amount RM</th></tr>
 
-      <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "postuisyenv3";
+<?php
+
+include "connectdb.php";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

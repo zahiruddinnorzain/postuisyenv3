@@ -33,12 +33,7 @@ $ssalamat = $_POST["Saddress"];
 $ssphone = $_POST["Sphone"];
 
 
-
-
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "postuisyenv3";
+include "connectdb.php";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

@@ -37,11 +37,8 @@
 <table class="table">
     <tr><th>ID</th><th>Name</th><th>tahun lahir</th><th>subjek</th><th>hari</th><th>bayaran/Hour</th><th>alamat</th><th>nota</th></tr>
 
-      <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "postuisyenv3";
+<?php
+include "connectdb.php";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
