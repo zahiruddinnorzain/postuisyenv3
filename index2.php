@@ -32,6 +32,11 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-4">
+      <h3>LIST TEACHING</h3>
+      <a href="list_teaching.php" class="btn btn-info btn-lg" role="button">LIST STUDENT</a>
+      <br><br>
+    </div>
+    <div class="col-sm-4">
       <h3>LIST STUDENT</h3>
       <a href="list_student.php" class="btn btn-info btn-lg" role="button">LIST STUDENT</a>
       <br><br>
@@ -39,6 +44,11 @@
     <div class="col-sm-4">
       <h3>LIST PAYMENT</h3>
       <a href="list_payment.php" class="btn btn-info btn-lg" role="button">LIST PAYMENT</a>
+      <br><br>
+    </div>
+    <div class="col-sm-4">
+      <h3>ADD TEACHING</h3>        
+      <a href="add_teaching.php" class="btn btn-info btn-lg" role="button">ADD TEACHING</a>
       <br><br>
     </div>
     <div class="col-sm-4">
