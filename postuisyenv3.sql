@@ -69,9 +69,7 @@ CREATE TABLE `pelajar` (
 --
 
 INSERT INTO `pelajar` (`id`, `username`, `nama`, `tahun_lahir`, `subjek`, `hari`, `bayaranHour`, `alamat`, `nota`) VALUES
-(3, 'zahir', 'balong', '1994', 'math', 'isnin', 30, 'no2 lorong 4/6', 'along'),
-(4, 'zirah', 'adik', '2002', 'bm', 'rabu', 30, 'no2 lorong 4/8', 'test'),
-(5, 'zahir', 'mak', '1965', 'bm', 'isnin', 30, 'no2 lorong 4/1', 'mak');
+(3, 'zahir', 'balong', '1994', 'math', 'isnin', 30, 'no 43', 'along');
 
 -- --------------------------------------------------------
 
@@ -119,7 +117,6 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `username`, `name`, `password`, `alamat`, `phone`) VALUES
 (1, 'zirah', 'norhazirah', 'tiaya', '', 0),
-(3, 'zahir', 'zahir', 'ctvk', 'loron 4/5, tmn muhibbah, 4800', 173323667),
 (4, 'ayip', 'ayip', '123', 'no.2 lorong 4/5', 17332443);
 
 --
