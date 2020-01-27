@@ -37,10 +37,11 @@
 
 
 <!-- //time now -->
-<button type="button" class="btn btn-info">NOW :
-      <?php 
-      echo(strftime("  %d.%m.%Y %H:%M")); ?>
-</button><br><br>
+<div id="jam" class="btn btn-info"></div><br><br>
+<script>
+var d = new Date().toLocaleString("hi-IN");
+document.getElementById("jam").innerHTML = d;
+</script>
 
 <table class="table">
     <tr><th>ID</th><th>DATE</th><th>NAME</th><th>SUBJECT</th><th>TIME</th><th>HOURS</th></tr>

@@ -33,7 +33,7 @@
   <div class="row">
     <div class="col-sm-4">
       <h3>LIST TEACHING</h3>
-      <a href="list_teaching.php" class="btn btn-info btn-lg" role="button">LIST STUDENT</a>
+      <a href="list_teaching.php" class="btn btn-info btn-lg" role="button">LIST TEACHING</a>
       <br><br>
     </div>
     <div class="col-sm-4">
