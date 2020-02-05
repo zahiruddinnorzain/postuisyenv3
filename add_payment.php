@@ -80,7 +80,7 @@
   </form>
 
       <br>
-      <a href="index2.php" class="btn btn-info btn-lg" role="button">Back</a>
+      <a href="list_payment.php" class="btn btn-info btn-lg" role="button">Back</a>
       <br><br>
 
 </div>

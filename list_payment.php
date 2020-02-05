@@ -67,6 +67,9 @@ $conn->close();
 ?>
 
 </table>
+<!--add data-->
+<a href="add_payment.php" class="btn btn-primary" role="button">+ ADD</a>
+<br><br>
 
 <!-- print -->
 <h3>Print Your Payment</h3>

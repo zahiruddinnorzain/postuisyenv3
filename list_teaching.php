@@ -78,6 +78,10 @@ $conn->close();
 
 </table>
 
+<!--add data-->
+<a href="add_teaching.php" class="btn btn-primary" role="button">+ ADD</a>
+<br><br>
+
 <!-- delete -->
 <h3>Delete data</h3>
 <form action="action_delete_teaching.php" method="post">

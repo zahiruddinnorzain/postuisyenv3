@@ -45,22 +45,8 @@
       <h3>LIST PAYMENT</h3>
       <a href="list_payment.php" class="btn btn-info btn-lg" role="button">LIST PAYMENT</a>
       <br><br>
-    </div>
-    <div class="col-sm-4">
-      <h3>ADD TEACHING</h3>        
-      <a href="add_teaching.php" class="btn btn-info btn-lg" role="button">ADD TEACHING</a>
-      <br><br>
-    </div>
-    <div class="col-sm-4">
-      <h3>ADD STUDENT</h3>        
-      <a href="add_student.php" class="btn btn-info btn-lg" role="button">ADD STUDENT</a>
-      <br><br>
-    </div>
-    <div class="col-sm-4">
-      <h3>ADD PAYMENT</h3>        
-      <a href="add_payment.php" class="btn btn-info btn-lg" role="button">ADD PAYMENT</a>
-      <br><br>
-    </div>
+    </div>   
+    
   </div>
 </div>
 
